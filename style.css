@@ -200,6 +200,9 @@ a {
     background: linear-gradient(0deg, var(--light5) 0%, var(--light4) 100%);
     color: var(--dark5);
   }
+  .gray-button.button:hover {
+    background: linear-gradient(0deg, var(--light4) 0%, var(--light3) 100%);
+  }
   .gray-button.button:active {
     background: var(--light5);
     box-shadow: none;
