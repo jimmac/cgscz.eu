@@ -151,18 +151,18 @@ a {
   font-weight: bold;
   padding: 0.8em;
   text-decoration: none;
-  transition: all 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.28);
-  filter: /* Sharp drop shadow */
-          drop-shadow(0 0.08rem 0.03em rgba(0,0,0, 0.2))
+  transition: all 200ms ease-in-out;
+  box-shadow: /* Sharp drop shadow */
+          0 1px 1px rgba(0,0,0, 0.2),
           /* Diffuse ambient shadow */
-          drop-shadow(0 0.1rem 0.2em rgba(0,0,0, 0.2));
+          0 1px 0.4em rgba(0,0,0, 0.2);
 }
   .button:hover {
-    transform: scale(1.05);
     cursor: pointer;
   }
   .button:active {
-    transform: scale(0.98);
+    transform: scale(0.99);
+    box-shadow: none;
   }
 
   .small.button {
@@ -182,7 +182,10 @@ a {
     background: linear-gradient(180deg, var(--green3) 0%, var(--green5) 100%);
     color: white;
   }
-  .green-button.button:active {
+  .button.green-button:hover {
+    background: linear-gradient(180deg, var(--green2) 0%, var(--green4) 100%);
+  }
+  .button.green-button:active {
     background: var(--green5);
   }
   .blue-button {
@@ -194,11 +197,12 @@ a {
     color: #241f31;
   }
   .gray-button {
-    background: linear-gradient(0deg, #5e5c64 0%, #9a9996 100%);
-    color: white;
+    background: linear-gradient(0deg, var(--light5) 0%, var(--light4) 100%);
+    color: var(--dark5);
   }
   .gray-button.button:active {
     background: var(--light5);
+    box-shadow: none;
   }
   .red-button {
     background: linear-gradient(0deg, #c01c28 0%, #ed333b 100%);
